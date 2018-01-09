@@ -1,0 +1,56 @@
+<div [ngClass]="'listing'" *ngIf="incidentDetail">
+  <div [ngClass]="'container'">
+    <ul [ngClass]="'breadcrumb'">
+      <li><a [routerLink]="['/incidentlisting']">< Back to Incident Listing</a></li>
+      <!--<li><a href="#">Incident Listing</a></li>-->
+    </ul>
+    
+    <div [ngClass]="'jumbotron'">
+      <h1 [ngClass]="'page-header'">{{incidentDetail.incident_desc.substring(0, 40)}}</h1>
+    </div>
+    <ul [ngClass]="'detail-list-group'">
+      <li>Reporter: {{incidentDetail.creation_by}}</li>
+      <li>Capture time: {{incidentDetail.creation_date}} </li>
+      <li>Location: {{incidentDetail.cincident_city}}</li>
+      <!--<li>Help counter: <span>22</span></li>-->
+    </ul>
+    
+  </div>
+
+  <div [ngClass]="'container'">
+      <div [ngClass]="'row'">    
+        <div [ngClass]="'col-md-6 detail-image'">
+          <img  src="{{imageUrl}}" src-fallback="{{ workingPlaceholder }}" (loaded)="onLoad($event)">
+        </div>
+
+        <div [ngClass]="'col-md-6'">
+          
+          <p>{{incidentDetail.incident_desc}}</div>
+        
+
+        <div [ngClass]="'col-md-12 button-container'">
+          <div [ngClass]="'navigate-location'">
+            <a href="https://www.google.com/maps/place/{{incidentDetail.incident_lat}},{{incidentDetail.incident_long}}" target="_blank"> Click & navigate to location </a>
+          </div>
+          <button class="btn btn-lg btn-success">Extend Help</button>
+        </div>
+    </div>
+  </div>
+
+
+<go-top-button [html]="'<i class=\'icon-chevron-up\'></i>'"
+                 [animate]="true"
+                 [speed]="50"
+                 [acceleration]="2"
+                 [scrollDistance]="300"
+                 [styles]="{
+                    'border-radius': '35px 35px 35px 35px',
+                    'right': '20px',
+                    'color': 'white',
+                    'line-height': '20px',
+                    'background':' #2780e3',
+                    'transition:':'all 0.3s ease',
+                    'width':'50px',
+                    'height':'50px'
+                 }">
+  </go-top-button>

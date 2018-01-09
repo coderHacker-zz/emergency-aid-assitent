@@ -1,0 +1,110 @@
+// Listing page
+
+.listing-iteam {
+    max-width: 1130px;
+    
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px 10px;
+    border: 1px solid #c5c6c6;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 15px;
+    margin-bottom: 25px;
+
+     @media (min-width: 992px) {
+        margin: 0 auto 25px;
+        overflow: hidden;         
+    
+     }
+
+    &:first-child {
+        margin-top: 25px;
+    }
+
+    .jumbotron {
+        background: none;
+    }
+
+    .label {
+        width: 70px;
+        height: 70px;
+        border-radius: 80px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: -22px;
+        top: -44px;
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 1);
+        -moz-box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 1);
+        box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 1);
+        font-size: 83%;
+        -ms-transform: rotate(-45deg); 
+        -webkit-transform: rotate(-45deg); 
+        transform: rotate(-45deg);
+        @media (min-width: 992px) {
+            left: -2px;
+            top: -19px;
+        }
+    }
+    
+    .btn-lg {
+        font-size: 15px;
+    }
+
+    .col-md-8 + .col-md-3 {
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    h1 {
+      margin-top: 20px;
+
+      @media (min-width: 992px) {
+        margin-top: -2px;
+      }  
+    }
+}
+
+.go-top-button {
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px !important;
+    background: rgb(39, 128, 227) !important;
+    width: 50px !important;
+    height: 50px !important;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px !important;
+    -moz-border-radius: 35px !important;
+    border-radius: 35px !important;
+    //display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.icon-chevron-up {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.go-top-button:hover {
+    background: rgba(39, 128, 227, 0.9);
+}
+.go-top-button:hover i {
+    color: #fff;
+    top: 5px;
+}

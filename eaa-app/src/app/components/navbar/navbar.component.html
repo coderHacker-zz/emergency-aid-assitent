@@ -1,0 +1,26 @@
+<nav [ngClass]="'navbar navbar-inverse'">
+      <div [ngClass]="'container'">
+        <div [ngClass]="'navbar-header'">
+          <button type="button" [ngClass]="'navbar-toggle collapsed'" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span [ngClass]="'sr-only'">Toggle navigation</span>
+            <span [ngClass]="'icon-bar'"></span>
+            <span [ngClass]="'icon-bar'"></span>
+            <span [ngClass]="'icon-bar'"></span>
+          </button>
+          <a [ngClass]="'navbar-brand'" [routerLink]="['/']"><img src="../../../assets/logo.png" alt="logo"/></a>
+        </div>
+        <div id="navbar" [ngClass]="'collapse navbar-collapse'">
+          <ul [ngClass]="'nav navbar-nav navbar-left'">
+            <li><a *ngIf="!(af.auth | async)" [routerLink]="['/']"></a></li>
+            <li><a *ngIf="(af.auth | async)" [routerLink]="['/']">Report Incident</a></li>
+            <li *ngIf="(af.auth | async)"><a [routerLink]="['/incidentlisting']">Incident Listing</a></li>
+             
+    
+          </ul>
+          <ul [ngClass]="'nav navbar-nav navbar-right'">
+            <li *ngIf="!(af.auth | async)" [ngClass]="'google-login'"><a (click)="login()">Login with Google</a></li>
+            <li *ngIf="(af.auth | async)"><a [routerLink]="['/']" (click)="logout()" [ngClass]="'logout'"><span [ngClass]="'login-image'"><img src="{{registrationRecord.auth.photoURL}}"/></span><strong>{{registrationRecord.auth.displayName}} | Logout</strong></a></li>
+           </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>

@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background: #e6e6e6;
+}
+
+.btn-success {
+    border-radius: 80px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
+    display: inline-block;
+    margin: 0 auto;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;    
+}
+
+a {
+  -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;    
+}

@@ -1,0 +1,23 @@
+
+<form (submit)="onAddSubmit()">
+<div class="grey clearfix">
+  <div class="col-md-8 home-container">
+    <div class="jumbotron">
+      <h1>Describe the Incident</h1>    
+    </div>
+  
+  <div class="form-group">
+  <textarea  class="form-control" placeholder="Start with title and detail should follow" [(ngModel)]="incident_desc" name="incident_desc" required></textarea>
+  </div>
+    <div class="pic-link">
+      <input id="image" name="image" type="file" required>
+      <p> <img src="../../../assets/camera-icon.png"/>Capture incident</p>
+    </div>  
+     <div class="form-group">
+    
+    </div>  
+    <button type="submit" *ngIf="(af.auth | async)" class="btn btn-lg btn-success">Report Incident</button>
+    <button type="button" *ngIf="!(af.auth | async)"  (click)="login()" class="btn btn-lg btn-success">Report Incident</button>
+  </div>
+</div>
+</form>

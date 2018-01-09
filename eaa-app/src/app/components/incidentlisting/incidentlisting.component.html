@@ -1,0 +1,40 @@
+<div [ngClass]="'listing-iteam'" *ngFor="let listing of incidentlistings">
+  <div [ngClass]="'col-md-1'">
+    <!--<span [ngClass]="'label label-info'">In Progress</span> -->
+    <!--<span [ngClass]="label label-warning">Closed</span>-->
+    <span [ngClass]="'label label-warning'">New</span>
+<!--          <img style="width:100%" class="thumbnail" src="{{imageUrl}}" title="{{listing.incident_desc.substring(0, 40)}}" src-fallback="{{ workingPlaceholder }}" (loaded)="onLoad($event)"> -->
+  </div>
+
+  <div [ngClass]="'col-md-8'">
+    
+    <h1>{{listing.incident_desc.substring(0, 40)}}...</h1> 
+    <p><strong>{{listing.incident_city}} || {{listing.creation_date}} </strong></p>
+
+    <p>{{listing.incident_desc}} </p>
+  </div>
+
+  <div [ngClass]="'col-md-3'">
+    <a [ngClass]="'btn btn-lg btn-success'" [routerLink]="['/incidentdetail/'+listing.$key]" href="#" role="button">Click here for details</a>
+  </div>  
+
+</div>
+
+<!--<a href="javascript:" class="go-top-button"><i class="icon-chevron-up"></i></a>-->
+
+<go-top-button [html]="'<i class=\'icon-chevron-up\'></i>'"
+                 [animate]="true"
+                 [speed]="50"
+                 [acceleration]="2"
+                 [scrollDistance]="300"
+                 [styles]="{
+                    'border-radius': '35px 35px 35px 35px',
+                    'right': '20px',
+                    'color': 'white',
+                    'line-height': '20px',
+                    'background':' #2780e3',
+                    'transition:':'all 0.3s ease',
+                    'width':'50px',
+                    'height':'50px'
+                 }">
+  </go-top-button>
